@@ -1,0 +1,29 @@
+[ {
+  "id" : "6135e6ef-c62d-e5c6-e10b-0fc4ea6d0a1a",
+  "name" : "block_header",
+  "label" : "Block Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Block Header"
+}, {
+  "id" : "11222047-2834-e3d2-d466-f14fb0125a78",
+  "name" : "block_content",
+  "label" : "Block Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Block content goes here</p>"
+}, {
+  "id" : "91f43943-ca80-8fa1-5e50-9d0a7c461f89",
+  "name" : "cta_button",
+  "label" : "CTA button",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : "ac597129-f6eb-4687-b665-c09006a53c60"
+} ]
