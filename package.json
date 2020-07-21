@@ -1,6 +1,11 @@
 {
     "name": "demo-website-theme",
     "version": "0.0.1",
+    "description": "Hubspot website created from Boilerplate HubSpot CMS for practice purposes",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:punyashree25/demo-website-theme.git"
+    },
     "devDependencies": {
         "@hubspot/cms-cli": "^1.0.2",
         "js-yaml": "^3.13.1"
