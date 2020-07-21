@@ -1,0 +1,42 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+    <head>
+      <meta charset="utf-8">
+        <meta name="description" content="{{ page_meta.meta_description }}">
+        <title>{{ page_meta.html_title }}</title>
+        {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
+
+        {#
+        `standard_header_includes` is required to be in the `head` tag.
+        The HubSpot CMS uses the variable to output `link` tag for CSS and other HTML as necessary.
+        #}
+        {{ standard_header_includes }}
+        <script>
+        var requestOptions = {
+            'method': 'GET',
+            'headers': {
+                'Content-Type': 'application/json',
+            }
+        };
+
+        fetch("http://hubspot-developers-2ruvxy-8086346.hs-sites.com/_hcms/api/printmessage", requestOptions)
+            .then(response => response.text())
+            .then(result => alert(result))
+            .catch(error => console.log('error', error));
+        </script>
+
+        {{ require_css(get_asset_url("../css/templates/_serverless_template.css"))}}
+    </head>
+    <body>
+        <h3 class="message">ALERT WILL SHOW THE SERVERLESS FUNCTION RESPONSE!</h3>
+        {#
+        `standard_footer_includes` is required and should be placed before the closing body element.
+        The HubSpot CMS uses the variable to add `script` tags and other HTML like debug information.
+        #}
+        {{ standard_footer_includes }}
+    </body>
+</html>
