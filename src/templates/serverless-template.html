@@ -26,7 +26,7 @@
         fetch("http://hubspot-developers-2ruvxy-8086346.hs-sites.com/_hcms/api/printmessage", requestOptions)
             .then(response => response.text())
             .then(result => {
-                document.getElementById("message").innerHTML = result;
+                document.getElementById("result").innerHTML = result;
             })
             .catch(error => console.log('error', error));
         </script>
@@ -34,7 +34,8 @@
         {{ require_css(get_asset_url("../css/templates/_serverless_template.css"))}}
     </head>
     <body>
-        <h3 class="message" id="message">ALERT WILL SHOW THE SERVERLESS FUNCTION RESPONSE!</h3>
+        <h3 class="message">ALERT WILL SHOW THE SERVERLESS FUNCTION RESPONSE!</h3>
+        <p id="result"></p>
         {#
         `standard_footer_includes` is required and should be placed before the closing body element.
         The HubSpot CMS uses the variable to add `script` tags and other HTML like debug information.
